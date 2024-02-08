@@ -32,6 +32,17 @@
                 <img src="/images/tech.jpg" style="height: 300px;">
             </div>
         </div>
+        <div class="row pt-5">
+            <div class="col-4">
+                <img src="/images/bnm.jpg" style="height: 300px;">
+            </div>
+            <div class="col-4">
+                <img src="/images/soft.jpg" style="height: 300px;">
+            </div>
+            <div class="col-4">
+                <img src="/images/tech.jpg" style="height: 300px;">
+            </div>
+        </div>
 
     </div>
 
