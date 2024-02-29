@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User; // Import User model
 
 class ProfilesController extends Controller
 {
-    public function index()
+    public function index($user)
     {
-        return view('home');
+        $user = User::find($user);
+        return view('home', ["user" => $user]);
     }
 }
