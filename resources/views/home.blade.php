@@ -15,11 +15,11 @@
                 <div class="pe-5"><strong>212</strong> following</div>
                 <div class="pe-5"><strong>153</strong> posts</div>
             </div>
-            <div class="pt-2"><strong>jldaveoplus.com</strong></div>
+            <div class="pt-2"><strong>{{ $user -> profile -> title }}</strong></div>
             <div>
-                Welcome to JLD MeetsUP, a vibrant online community where connections are made and conversations happen. Our platform, accessible at jldaveoplus.com, is designed to bring people together, fostering meaningful interactions and shared experiences. Whether you’re looking to meet new people, share your thoughts, or explore exciting content, JLD MeetsUP is the place to be. Join us today and be part of our growing community!
+                {{ $user -> profile -> description }}
             </div>
-            <div><a href="#">www.jldaveoplus.com</a></div>
+            <div><a href="#">{{ $user -> profile -> url }}</a></div>
         </div>
         <div class="row pt-5">
             <div class="col-4">
