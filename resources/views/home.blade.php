@@ -7,8 +7,9 @@
             <img src="/images/dev.jpg" class="rounded-circle" style="height:150px;">
         </div>
         <div class="col-9 pt-5">
-            <div>
+            <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user -> username }}</h1>
+                <a href="#">Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class="pe-5"><strong>23k</strong> followers</div>
