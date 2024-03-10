@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Intervention\Image\Facade\Image;
+use Intervention\Image\Laravel\Facades\Image;
 
 class PostsController extends Controller
 {
