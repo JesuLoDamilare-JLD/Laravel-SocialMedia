@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use League\Flysystem\WebDAV\SabreServerTest;
-use Intervention\Image\Facades\Image;
+use Intervention\Image\ImageManager;
 
 class PostsController extends Controller
 {
@@ -19,7 +19,7 @@ class PostsController extends Controller
         return view('posts.create');
     }
 
-    public function store()
+    public function store(ImageManager $imageManager)
     {
         $data = request()->validate([
             "caption" => "required",
@@ -28,7 +28,7 @@ class PostsController extends Controller
 
         $imagePath = request("image")->store("uploads", "public");
 
-        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
+        $image = $imageManager->make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
         $image->save();
 
 
