@@ -8,9 +8,13 @@ use App\Models\User; // Import User model
 
 class ProfilesController extends Controller
 {
-    public function index($user)
+    public function index(\App\Models\User $user)
     {
-        $user = User::findOrFail($user);
-        return view('profiles.index', ["user" => $user]);
+        return view('profiles.index', compact("user"));
+    }
+
+    public function edit(\App\Models\User $user)
+    {
+        return view("profiles.edit", compact("user"));
     }
 }
