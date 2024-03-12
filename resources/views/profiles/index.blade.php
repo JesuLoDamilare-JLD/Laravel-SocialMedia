@@ -10,7 +10,9 @@
             <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user -> username }}</h1>
                 <a href="/p/create">Add New Post</a>
+
             </div>
+            <a href="/profile/{{ $user -> id }}/edit">Edit profile</a>
             <div class="d-flex">
                 <div class="pe-5"><strong>23k</strong> followers</div>
                 <div class="pe-5"><strong>212</strong> following</div>
