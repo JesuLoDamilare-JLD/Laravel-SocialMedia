@@ -30,6 +30,7 @@
                     @error('image')
                     <strong>{{ $message }}</strong>
                     @enderror
+                    trying to
                 </div>
 
                 <div class="row pt-4 col-md-2">
