@@ -8,15 +8,15 @@
         <div class="row">
             <div class="col-8 offset-2">
                 <div class="row">
-                    <h1>Add New Post</h1>
+                    <h1>Edit Profile</h1>
                 </div>
 
                 <div class="row mb-3">
-                    <label for="caption" class="col-md-4 col-form-label ">Post Caption</label>
+                    <label for="title" class="col-md-4 col-form-label ">Post Caption</label>
 
-                    <input id="caption" type="text" class="form-control @error('caption') is-invalid @enderror" name="caption" value="{{ old('caption') }}" required autocomplete="caption" autofocus>
+                    <input id="title" type="text" class="form-control @error('caption') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus>
 
-                    @error('caption')
+                    @error('title')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
