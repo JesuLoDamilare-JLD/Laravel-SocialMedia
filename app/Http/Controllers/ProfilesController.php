@@ -21,10 +21,11 @@ class ProfilesController extends Controller
     public function update()
     {
         $data = request()->validate([
-            "title" => "",
-            "description" => "",
-            "url" => "",
+            "title" => "required",
+            "description" => "required",
+            "url" => "url",
             "image" => "",
         ]);
+        dd($data);
     }
 }
