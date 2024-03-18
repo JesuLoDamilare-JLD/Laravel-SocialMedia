@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User; // Import User model
+use Intervention\Image\Laravel\Facades\Image;
 
 class ProfilesController extends Controller
 {
@@ -29,7 +30,31 @@ class ProfilesController extends Controller
             "url" => "url",
             "image" => "",
         ]);
-        auth()->user()->profile->update($data);
+
+
+        if (request("image")) {
+            $imagePath = request("image")->store("profile", "public");
+
+            $image = Image::read(public_path("storage/{$imagePath}"))->resize(1000, 1000);
+            $image->save();
+        }
+
+
+        dd(array_merge(
+            $data,
+            [
+                "image" => $imagePath
+
+            ]
+        ));
+        auth()->user()->profile->update(array_merge(
+            $data,
+            [
+                "image" => $imagePath
+
+            ]
+        ));
+
         return redirect("/profile/{$user->id}");
     }
 }
