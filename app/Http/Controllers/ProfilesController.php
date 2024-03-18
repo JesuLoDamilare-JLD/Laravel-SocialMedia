@@ -26,6 +26,7 @@ class ProfilesController extends Controller
             "url" => "url",
             "image" => "",
         ]);
-        dd($data);
+        user->profile->update($data);
+        return redirect("/profile/{$user->id}");
     }
 }
