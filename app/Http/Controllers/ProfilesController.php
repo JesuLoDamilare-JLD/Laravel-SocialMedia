@@ -15,6 +15,7 @@ class ProfilesController extends Controller
 
     public function edit(\App\Models\User $user)
     {
+        $this->athourize("update", $user->profile);
         return view("profiles.edit", compact("user"));
     }
 
