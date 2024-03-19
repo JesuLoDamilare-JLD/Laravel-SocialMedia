@@ -14,7 +14,8 @@
                     </div>
                     <div>
                         <div style="font-weight: bold;">
-                            <a href="/profile/{{ $post -> user -> id }}"> <span class="text-dark">{{ $post -> user -> username }}</span></a>
+                            <a href="/profile/{{ $post -> user -> id }}" style="text-decoration: none;"> <span class="text-dark">{{ $post -> user -> username }}</span></a>
+                            <a href="#" class="ps-3">Follow</a>
                         </div>
                     </div>
                 </div>
@@ -24,7 +25,7 @@
 
                 <p>
                     <span style="font-weight: bold;">
-                        <a href="/profile/{{ $post -> user -> id }}"> <span class="text-dark">{{ $post -> user -> username }}</span></a>
+                        <a href="/profile/{{ $post -> user -> id }}" style="text-decoration: none;"> <span class="text-dark">{{ $post -> user -> username }}</span></a>
                     </span> {{$post -> caption }}
                 </p>
             </div>
