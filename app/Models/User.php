@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use PhpParser\Node\Expr\FuncCall;
 
 class User extends Authenticatable
 {
@@ -60,6 +61,10 @@ class User extends Authenticatable
     public function posts()
     {
         return $this->hasMany(Post::class)->orderBy("created_at", "DESC");
+    }
+    public function following()
+    {
+        return $this->belongsToMany(Profile::class);
     }
 
     public function profile()
