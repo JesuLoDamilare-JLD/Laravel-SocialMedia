@@ -14,10 +14,10 @@ export default {
         console.log("Component mounted.");
     },
 
-    data: function() {
-        return{
+    data: function () {
+        return {
             status:
-        }
+        };
     },
 
     methods: {
