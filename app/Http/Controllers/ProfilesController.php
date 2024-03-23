@@ -11,11 +11,11 @@ class ProfilesController extends Controller
 {
     public function index(\App\Models\User $user)
     {
-        $follows = (auth()->user()) ? auth()->user()->following->contains($user) : false;
+        $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
 
-        dd($follows);
+        // dd($follows);
 
-        return view('profiles.index', compact("user", $follows));
+        return view('profiles.index', compact("user", "follows"));
     }
 
     public function edit(\App\Models\User $user)
