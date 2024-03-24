@@ -9,7 +9,7 @@ use App\Models\User;
 
 class FollowsController extends Controller
 {
-    public function store(User $user)
+    public function store(\App\Models\User $user)
     {
         return auth()->user()->following()->toggle($user->profile);
     }

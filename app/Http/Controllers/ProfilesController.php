@@ -11,7 +11,7 @@ class ProfilesController extends Controller
 {
     public function index(\App\Models\User $user)
     {
-        $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
+        $follows = (auth()->user()) ? auth()->user()->following->contains("profile_id", $user->id) : false;
 
         dd($follows);
 
