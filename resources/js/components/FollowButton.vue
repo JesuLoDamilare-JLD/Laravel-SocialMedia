@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    props: ["userId"],
+    props: ["userId", "follows"],
 
     mounted() {
         console.log("Component mounted.");
@@ -16,8 +16,8 @@ export default {
 
     data: function () {
         return {
-            status:
-        }
+            status: this.follows,
+        };
     },
 
     methods: {
