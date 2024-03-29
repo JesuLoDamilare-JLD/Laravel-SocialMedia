@@ -1,12 +1,14 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
     @foreach($posts as $post)
     <div class="row">
-        <div class="col-8">
-            <img src="{{$post -> profileImage() }}" class="w-100">
+        <div class="col-8 offset-2">
+            <a href="/profile/{{ $post->user->id }}"><img src="{{$post -> profileImage() }}" class="w-100"></a>
         </div>
+    </div>
+    <div class="row">
         <div class="col-4">
             <div>
                 <div class="d-flex align-items-center">
@@ -21,7 +23,7 @@
                     </div>
                 </div>
 
-                <hr>
+
 
 
                 <p>
@@ -35,4 +37,4 @@
 
     @endforeach
 </div>
-@endsection
+@endsection -->
