@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    @foreach($posts as post)
+    @foreach($posts as $post)
     <div class="row">
         <div class="col-8">
             <img src="{{$post -> profileImage() }}" class="w-100">
