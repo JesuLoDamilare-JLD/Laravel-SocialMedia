@@ -169,6 +169,7 @@ return [
         App\Providers\EventServiceProvider::class,
         Intervention\Image\Laravel\ServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\TelescopeServiceProvider::class,
     ])->toArray(),
 
     /*

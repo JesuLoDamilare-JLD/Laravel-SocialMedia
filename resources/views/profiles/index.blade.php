@@ -24,8 +24,8 @@
             @endcan
 
             <div class="d-flex">
-                <div class="pe-5"><strong>23k</strong> followers</div>
-                <div class="pe-5"><strong>1234</strong> following</div>
+                <div class="pe-5"><strong>{{ $user->profile->followers->count() }}</strong> followers</div>
+                <div class="pe-5"><strong>{{ $user->following->count() }}</strong> following</div>
                 <div class="pe-5"><strong>{{ $user->posts->count() }}</strong> posts</div>
             </div>
             <div class="pt-2"><strong>{{ $user -> profile -> title }}</strong></div>
