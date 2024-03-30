@@ -3,11 +3,15 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Mail\NewUserWelcomeMail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use PhpParser\Node\Expr\FuncCall;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Support\Facades\Mail;
 
 class User extends Authenticatable
 {
@@ -54,6 +58,9 @@ class User extends Authenticatable
                 $user->profile()->create([
                     "title" => $user->username,
                 ]);
+
+
+                Mail::to($user->email)->send(new NewUserWelcomeMail());
             }
         );
     }
